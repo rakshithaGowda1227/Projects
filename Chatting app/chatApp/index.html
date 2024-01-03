@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="shortcut icon" href="assets/image/chat-round-unread-svgrepo-com.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <center>
+                <h3>Create Account</h3>
+            </center>
+            <form>
+                <label for="name">Username</label><br>
+                <input type="text" name="name" id="username" required placeholder="Enter your name">
+                <br>
+                <label for="email">Email Address</label><br>
+                <input type="email" name="email" id="email" required placeholder="Enter  your email">
+                <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" required placeholder="Enter  your password"><br>
+                <input type="checkbox" id="showPass" onchange="togglePassword()" ><label for="showPass">Show Password</label>
+                <br>
+                <label for="c-password"> Confirm Password</label><br>
+                <input type="password" name="c-password" id="c-password" required placeholder="Confirm password">
+                <br><br>
+
+                <button type="button" onClick="createAccount()" >Create Account <br><small>To Unlimited Features</small></button>
+                <small>Do You Already Have an Account? <a href="./login.html" >log in</a></small>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script> -->
+      
+      
+      <!-- <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.esm.js';
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.esm.js';
+          const firebaseConfig = {
+    apiKey: "AIzaSyDMwuTF6dZtnFLoBm3bSD_h0wGG8pNkhFI",
+    authDomain: "chatapp-6157a.firebaseapp.com",
+    projectId: "chatapp-6157a",
+    storageBucket: "chatapp-6157a.appspot.com",
+    messagingSenderId: "389128318878",
+    appId: "1:389128318878:web:13370a0f92c4923352b08f",
+    measurementId: "G-X9XBDYKS6V"
+  };
+  firebase.initializeApp(firebaseConfig);
+      </script> -->
+
+
+      <script >
+//         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.esm.js';
+//         import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.esm.js';
+//           const firebaseConfig = {
+//     apiKey: "AIzaSyDMwuTF6dZtnFLoBm3bSD_h0wGG8pNkhFI",
+//     authDomain: "chatapp-6157a.firebaseapp.com",
+//     projectId: "chatapp-6157a",
+//     storageBucket: "chatapp-6157a.appspot.com",
+//     messagingSenderId: "389128318878",
+//     appId: "1:389128318878:web:13370a0f92c4923352b08f",
+//     measurementId: "G-X9XBDYKS6V"
+//   };
+  
+//   firebase.initializeApp(firebaseConfig);
+//   const auth = firebase.auth();
+
+        function togglePassword(){
+            var passwordField = document.getElementById('password');
+            var checkbox = document.getElementById('showPass');
+    
+            passwordField.type = checkbox.checked? "text" : "password"
+        }
+        // // function createAccount(){
+        //     var email = document.getElementById('email').value;
+        //     var password = document.getElementById('password').value;
+        //     var cpass = document.getElementById("c_password").value;
+        //     auth.createUserWithEmailAndPassword(email, password).then(function(userCredentials){
+        //         alert("account has been created😎🐼");
+        //     })
+        //     .catch(function(error){
+        //         alert("something went wrong please try again later")
+        //     })
+        // }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="script.js" ></script>
+    </body>
+</html>
